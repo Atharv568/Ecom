@@ -3,6 +3,7 @@ package com.atharv.ecom.ecom.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,4 +27,9 @@ public class Product {
     private Date releaseDate;
     private boolean available;
     private int quantity;
+
+    private String image;
+    private String imagetype;
+    @Lob
+    private byte[] imageData;
 }
